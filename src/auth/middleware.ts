@@ -15,6 +15,10 @@ const isAuthenticated = (req: Request, res: Response, next: NextFunction) => {
         return next();
       });
     }
+  } else {
+    return res.status(401).json({
+      message: "Invalid token",
+    });
   }
 };
 export default { isAuthenticated };
