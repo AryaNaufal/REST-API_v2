@@ -6,6 +6,14 @@ const router = express.Router();
 
 const prisma = database.getDB();
 
+router.get("/getUsers", async (req, res) => {
+  const getUsers = await prisma.account.findMany()
+
+  // console.log(getUsers);
+  
+  return res.status(200).send(getUsers)
+})
+
 router.post("/addUsers", async (req, res) => {
   const { email, password, username } = req.body;
 

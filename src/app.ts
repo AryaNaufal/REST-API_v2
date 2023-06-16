@@ -36,6 +36,7 @@ app.get("/", (req, res) => {
  * Remove comment to enable auth verification to access the api
  */
 app.use("/auth", auth);
+app.use("/tes", database);
 
 // app.use("/api/v1", api);
 

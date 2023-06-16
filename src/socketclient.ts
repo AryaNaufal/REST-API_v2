@@ -7,8 +7,8 @@ socket.on("connect", () => {
 
 });
 
-socket.on("message", (data) => {
+socket.emit("msgClient", "Nama aku tono");
+
+socket.on("msgClient", (data) => {
   console.log("message from server :" + data)
 })
-
-socket.emit("message", "Nama aku tono");
