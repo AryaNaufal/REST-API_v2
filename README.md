@@ -1,4 +1,4 @@
-# TypeScript Express Rest Api
+# TypeScript Express Rest Api with mongoDB
 
 Includes API Server utilities:
 
